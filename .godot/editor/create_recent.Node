@@ -1,2 +1,5 @@
+SpotLight3D
+DirectionalLight3D
+CanvasLayer
 WorldEnvironment
 TileMap
