@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://World.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://khj3t1pry5fv" path="res://Map.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://hrvhmwsh4fho" path="res://Player.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://ddjfuymqtbrst" path="res://eyemon_30.tscn" id="4_ry2la"]
+[ext_resource type="PackedScene" uid="uid://bplomktychqbj" path="res://eyemon_done.tscn" id="5_40xay"]
 
 [sub_resource type="Environment" id="Environment_xs83s"]
 background_mode = 1
@@ -23,5 +23,5 @@ Map = ExtResource("2")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xs83s")
 
-[node name="eyemon30" parent="." instance=ExtResource("4_ry2la")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -2.43549, 0.639733, -2.40492)
+[node name="eyemon_done" parent="." instance=ExtResource("5_40xay")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.00148648, 0.639733, -2.40492)
