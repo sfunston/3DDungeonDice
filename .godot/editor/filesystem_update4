@@ -1,7 +1,8 @@
-res://eyemon_30.tscn
-res://eyemon_done.tscn
 res://World.tscn
 res://Map.tscn
 res://Player.tscn
 res://Cell.tscn
 res://MapCreator.tscn
+res://eyemon_30.tscn
+res://eyemon_done.tscn
+res://sword.tscn
