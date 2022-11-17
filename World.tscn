@@ -25,7 +25,7 @@ Map = ExtResource("2")
 environment = SubResource("Environment_xs83s")
 
 [node name="eyemon_done" parent="." instance=ExtResource("5_40xay")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.00148648, 0.639733, -2.40492)
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.00148648, 0.639733, -2.71733)
 
 [node name="sword" parent="." instance=ExtResource("5_5m0cg")]
 transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 4.41351, 0.317776, 0)

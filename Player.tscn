@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://hrvhmwsh4fho"]
+[gd_scene load_steps=7 format=3 uid="uid://hrvhmwsh4fho"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bjctda03f6adt" path="res://sword.tscn" id="2_2y6sa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b6ooa"]
 
 [sub_resource type="Animation" id="1"]
 length = 0.001
@@ -48,6 +51,15 @@ process_mode = 3
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 1, 0.5)
 fov = 70.0
 far = 100.0
+
+[node name="sword" parent="Camera3D" instance=ExtResource("2_2y6sa")]
+transform = Transform3D(-0.0408632, 0.0035469, 0.028594, -0.00180435, 0.0492073, -0.00868241, -0.0287566, -0.00812769, -0.0400874, 0.374913, -0.75, -0.538724)
+
+[node name="Hitbox" type="Area3D" parent="Camera3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81906e-07, 0, -1.3281)
+shape = SubResource("BoxShape3D_b6ooa")
 
 [node name="RayForward" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

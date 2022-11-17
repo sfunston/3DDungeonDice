@@ -1,8 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4l8g5digyffj"]
+[gd_scene load_steps=13 format=3 uid="uid://b4l8g5digyffj"]
 
 [ext_resource type="ArrayMesh" uid="uid://da51q5b8jbtrf" path="res://Floor.obj" id="2"]
 [ext_resource type="Script" path="res://Cell.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://cdxhfpya4ohui" path="res://Textures/floors.png" id="3_amdqy"]
 [ext_resource type="ArrayMesh" uid="uid://8xy6pcapiccf" path="res://Wall.obj" id="4"]
+[ext_resource type="Texture2D" uid="uid://dbbgkkwakfdvu" path="res://Textures/walls.png" id="4_rcq6m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxns0"]
+albedo_texture = ExtResource("3_amdqy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xn2k8"]
+albedo_texture = ExtResource("4_rcq6m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1obkx"]
+albedo_texture = ExtResource("4_rcq6m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcy5p"]
+albedo_texture = ExtResource("4_rcq6m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ak6i"]
+albedo_texture = ExtResource("4_rcq6m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjeyb"]
+albedo_texture = ExtResource("3_amdqy")
 
 [sub_resource type="BoxShape3D" id="2"]
 
@@ -14,25 +34,31 @@ script = ExtResource("3")
 [node name="TopFace" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 2, 0)
 mesh = ExtResource("2")
+surface_material_override/0 = SubResource("StandardMaterial3D_sxns0")
 
 [node name="NorthFace" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, 4.37114e-08, 1, -4.37114e-08, 0, 1, -1)
 mesh = ExtResource("4")
+surface_material_override/0 = SubResource("StandardMaterial3D_xn2k8")
 
 [node name="EastFace" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, 1, 1, 0)
 mesh = ExtResource("4")
+surface_material_override/0 = SubResource("StandardMaterial3D_1obkx")
 
 [node name="SouthFace" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1.31134e-07, 1, -4.37114e-08, -1, 1.31134e-07, 0, 1, 1)
 mesh = ExtResource("4")
+surface_material_override/0 = SubResource("StandardMaterial3D_kcy5p")
 
 [node name="WestFace" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.37114e-08, 1, -8.74228e-08, -4.37114e-08, 8.74228e-08, 1, 1, -4.37114e-08, 4.37114e-08, -1, 1, 0)
 mesh = ExtResource("4")
+surface_material_override/0 = SubResource("StandardMaterial3D_4ak6i")
 
 [node name="BottomFace" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2")
+surface_material_override/0 = SubResource("StandardMaterial3D_xjeyb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
