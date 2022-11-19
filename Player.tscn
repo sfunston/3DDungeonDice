@@ -1,9 +1,36 @@
-[gd_scene load_steps=7 format=3 uid="uid://hrvhmwsh4fho"]
+[gd_scene load_steps=13 format=3 uid="uid://cd2v87x3x2dva"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://bjctda03f6adt" path="res://sword.tscn" id="2_2y6sa"]
+[ext_resource type="Shader" path="res://Models/lensdistortion.gdshader" id="2_kxy7j"]
+[ext_resource type="Shader" path="res://Models/tv.gdshader" id="3_1i51e"]
+[ext_resource type="Shader" path="res://Models/grain.gdshader" id="4_smckx"]
+[ext_resource type="Shader" path="res://Models/sharpness.gdshader" id="5_we88c"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b6ooa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_st7jv"]
+shader = ExtResource("3_1i51e")
+shader_parameter/bottomStaticOpt = 0.0
+shader_parameter/bottomStaticStrenth = 0.7
+shader_parameter/horzFuzzOpt = 0.15
+shader_parameter/rgbOffsetOpt = 0.3
+shader_parameter/scalinesOpt = 0.25
+shader_parameter/vertJerkOpt = 0.0
+shader_parameter/vertMovementOpt = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3b7r6"]
+shader = ExtResource("5_we88c")
+shader_parameter/sharpen_amount = 0.4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_336k4"]
+shader = ExtResource("4_smckx")
+shader_parameter/color_amount = 0.6
+shader_parameter/colored = true
+shader_parameter/grain_amount = 0.025
+shader_parameter/grain_size = 1.6
+shader_parameter/lum_amount = 1.3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_by2wg"]
+shader = ExtResource("2_kxy7j")
+shader_parameter/strength = 0.01
 
 [sub_resource type="Animation" id="1"]
 length = 0.001
@@ -52,14 +79,45 @@ transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 1, 0.
 fov = 70.0
 far = 100.0
 
-[node name="sword" parent="Camera3D" instance=ExtResource("2_2y6sa")]
-transform = Transform3D(-0.0408632, 0.0035469, 0.028594, -0.00180435, 0.0492073, -0.00868241, -0.0287566, -0.00812769, -0.0400874, 0.374913, -0.75, -0.538724)
+[node name="TV" type="CanvasLayer" parent="Camera3D"]
 
-[node name="Hitbox" type="Area3D" parent="Camera3D"]
+[node name="TV" type="ColorRect" parent="Camera3D/TV"]
+material = SubResource("ShaderMaterial_st7jv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Hitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81906e-07, 0, -1.3281)
-shape = SubResource("BoxShape3D_b6ooa")
+[node name="Sharpness" type="CanvasLayer" parent="Camera3D"]
+
+[node name="Sharpness" type="ColorRect" parent="Camera3D/Sharpness"]
+material = SubResource("ShaderMaterial_3b7r6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Grain" type="CanvasLayer" parent="Camera3D"]
+
+[node name="Grain" type="ColorRect" parent="Camera3D/Grain"]
+material = SubResource("ShaderMaterial_336k4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LensDistortion" type="CanvasLayer" parent="Camera3D"]
+
+[node name="LensDistortion" type="ColorRect" parent="Camera3D/LensDistortion"]
+material = SubResource("ShaderMaterial_by2wg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="RayForward" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -100,9 +158,9 @@ autostart = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.991796, 4.1034)
-light_energy = 2.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1.4)
 light_volumetric_fog_energy = 0.3
+light_bake_mode = 0
 distance_fade_enabled = true
 spot_range = 12.9197
 

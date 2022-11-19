@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnnkf8r1yaf7f"]
+[gd_scene load_steps=6 format=3 uid="uid://dnnkf8r1yaf7f"]
 
 [ext_resource type="Script" path="res://World.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://khj3t1pry5fv" path="res://Map.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://hrvhmwsh4fho" path="res://Player.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://bjctda03f6adt" path="res://sword.tscn" id="5_5m0cg"]
+[ext_resource type="PackedScene" uid="uid://cd2v87x3x2dva" path="res://Player.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bplomktychqbj" path="res://eyemon_done.tscn" id="5_40xay"]
 
 [sub_resource type="Environment" id="Environment_xs83s"]
@@ -26,6 +25,3 @@ environment = SubResource("Environment_xs83s")
 
 [node name="eyemon_done" parent="." instance=ExtResource("5_40xay")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.00148648, 0.639733, -2.71733)
-
-[node name="sword" parent="." instance=ExtResource("5_5m0cg")]
-transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 4.41351, 0.317776, 0)

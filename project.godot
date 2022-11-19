@@ -32,8 +32,8 @@ Globals="*res://Globals.gd"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=480
+window/size/viewport_width=320
+window/size/viewport_height=240
 window/stretch/mode="viewport"
 window/size/width=480
 window/size/height=270
@@ -85,4 +85,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/default_environment="res://default_env.tres"
