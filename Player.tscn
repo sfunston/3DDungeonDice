@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cd2v87x3x2dva"]
+[gd_scene load_steps=14 format=3 uid="uid://cd2v87x3x2dva"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
 [ext_resource type="Shader" path="res://Models/lensdistortion.gdshader" id="2_kxy7j"]
 [ext_resource type="Shader" path="res://Models/tv.gdshader" id="3_1i51e"]
 [ext_resource type="Shader" path="res://Models/grain.gdshader" id="4_smckx"]
 [ext_resource type="Shader" path="res://Models/sharpness.gdshader" id="5_we88c"]
+[ext_resource type="PackedScene" uid="uid://bgqm5oa52lem8" path="res://sword_4.tscn" id="6_s6d8x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_st7jv"]
 shader = ExtResource("3_1i51e")
@@ -18,7 +19,7 @@ shader_parameter/vertMovementOpt = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3b7r6"]
 shader = ExtResource("5_we88c")
-shader_parameter/sharpen_amount = 0.4
+shader_parameter/sharpen_amount = 0.3
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_336k4"]
 shader = ExtResource("4_smckx")
@@ -162,6 +163,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1.4)
 light_volumetric_fog_energy = 0.3
 light_bake_mode = 0
 distance_fade_enabled = true
-spot_range = 12.9197
+spot_range = 12.2891
+spot_angle = 42.1044
+
+[node name="sword4" parent="." instance=ExtResource("6_s6d8x")]
+transform = Transform3D(0.00435779, 0, -0.0498097, 0, 0.05, 0, 0.0498097, 0, 0.00435779, 0.32, 0.32, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
