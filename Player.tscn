@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://cd2v87x3x2dva"]
+[gd_scene load_steps=19 format=3 uid="uid://cd2v87x3x2dva"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://drs4cd82wpv0p" path="res://health_bar.tscn" id="2_4yy7t"]
 [ext_resource type="Shader" path="res://Models/lensdistortion.gdshader" id="2_kxy7j"]
 [ext_resource type="Shader" path="res://Models/tv.gdshader" id="3_1i51e"]
 [ext_resource type="Shader" path="res://Models/grain.gdshader" id="4_smckx"]
@@ -129,6 +130,10 @@ process_mode = 3
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 1, 0.5)
 fov = 70.0
 far = 100.0
+
+[node name="HealthBar" parent="Camera3D" instance=ExtResource("2_4yy7t")]
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LensDistortion" type="CanvasLayer" parent="Camera3D"]
 

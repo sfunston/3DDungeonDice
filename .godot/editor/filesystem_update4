@@ -5,4 +5,5 @@ res://Cell.tscn
 res://MapCreator.tscn
 res://eyemon_done.tscn
 res://sword_4.tscn
-res://Models/tv.gdshader
+res://health_bar.tscn
+res://Models/grain.gdshader
