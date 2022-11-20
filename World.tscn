@@ -9,6 +9,7 @@
 background_mode = 1
 sdfgi_read_sky_light = false
 volumetric_fog_enabled = true
+volumetric_fog_emission_energy = 0.6
 
 [node name="World" type="Node3D"]
 script = ExtResource("1")
