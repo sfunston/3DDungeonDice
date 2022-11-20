@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cd2v87x3x2dva"]
+[gd_scene load_steps=17 format=3 uid="uid://cd2v87x3x2dva"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
 [ext_resource type="Shader" path="res://Models/lensdistortion.gdshader" id="2_kxy7j"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://Models/grain.gdshader" id="4_smckx"]
 [ext_resource type="Shader" path="res://Models/sharpness.gdshader" id="5_we88c"]
 [ext_resource type="PackedScene" uid="uid://bgqm5oa52lem8" path="res://sword_4.tscn" id="6_s6d8x"]
+[ext_resource type="Script" path="res://sword.gd" id="7_7iqfr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_by2wg"]
 shader = ExtResource("2_kxy7j")
@@ -47,6 +48,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 1, 0.5)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.48353, 0)]
+}
 
 [sub_resource type="Animation" id="2"]
 resource_name = "Step"
@@ -65,10 +78,45 @@ tracks/0/keys = {
 "values": [Vector3(0, 1, 0.5), Vector3(0.02, 1.02, 0.5), Vector3(0, 1, 0.5), Vector3(-0.02, 1.02, 0.5), Vector3(0, 1, 0.5)]
 }
 
+[sub_resource type="Animation" id="Animation_jcyn3"]
+resource_name = "attack"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.48353, 0), Vector3(0, -1.48353, 1.0472)]
+}
+
+[sub_resource type="Animation" id="Animation_60rh6"]
+resource_name = "return"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.48353, 0.698132), Vector3(0, -1.48353, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4cs8p"]
 _data = {
 "RESET": SubResource("1"),
-"Step": SubResource("2")
+"Step": SubResource("2"),
+"attack": SubResource("Animation_jcyn3"),
+"return": SubResource("Animation_60rh6")
 }
 
 [node name="Player" type="Node3D"]
@@ -168,5 +216,6 @@ spot_angle = 42.1044
 
 [node name="sword4" parent="." instance=ExtResource("6_s6d8x")]
 transform = Transform3D(0.00435779, 0, -0.0498097, 0, 0.05, 0, 0.0498097, 0, 0.00435779, 0.32, 0.32, 0)
+script = ExtResource("7_7iqfr")
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
