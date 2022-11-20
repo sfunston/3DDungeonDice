@@ -7,6 +7,7 @@
 
 [sub_resource type="Environment" id="Environment_xs83s"]
 background_mode = 1
+background_color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 sdfgi_read_sky_light = false
 volumetric_fog_enabled = true
 volumetric_fog_emission_energy = 0.6
@@ -21,4 +22,4 @@ Map = ExtResource("2")
 environment = SubResource("Environment_xs83s")
 
 [node name="eyemon_done" parent="." instance=ExtResource("5_40xay")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.00148648, 0.639733, -2.71733)
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.7, -5)

@@ -211,9 +211,10 @@ script = ExtResource("7_7iqfr")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
-light_energy = 0.5
-light_indirect_energy = 0.5
-light_volumetric_fog_energy = 0.5
+light_color = Color(0.780392, 0.894118, 0.996078, 1)
+light_energy = 0.7
+light_indirect_energy = 0.7
+light_volumetric_fog_energy = 0.6
 distance_fade_enabled = true
 omni_range = 7.0
 
