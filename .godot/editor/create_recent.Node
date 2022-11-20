@@ -1,3 +1,6 @@
+CharacterBody3D
+CollisionShape3D
+Area3D
 GPUParticles3D
 OmniLight3D
 AnimationPlayer
@@ -5,8 +8,6 @@ ColorRect
 CanvasLayer
 MeshInstance3D
 Node3D
-CollisionShape3D
-Area3D
 SpotLight3D
 DirectionalLight3D
 WorldEnvironment
