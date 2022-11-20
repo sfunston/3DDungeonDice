@@ -7,12 +7,8 @@
 
 [sub_resource type="Environment" id="Environment_xs83s"]
 background_mode = 1
-background_color = Color(0.188235, 0.188235, 0.188235, 1)
 sdfgi_read_sky_light = false
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.15
-volumetric_fog_emission = Color(0.0745098, 0.0745098, 0.0745098, 1)
-volumetric_fog_emission_energy = 2.0
 
 [node name="World" type="Node3D"]
 script = ExtResource("1")
