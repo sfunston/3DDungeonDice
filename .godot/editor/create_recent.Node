@@ -1,3 +1,4 @@
+CanvasLayer
 Node3D
 TextureProgressBar
 CharacterBody3D
@@ -7,7 +8,6 @@ GPUParticles3D
 OmniLight3D
 AnimationPlayer
 ColorRect
-CanvasLayer
 MeshInstance3D
 SpotLight3D
 DirectionalLight3D
