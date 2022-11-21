@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Cell.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://jycslt54p4wg" path="res://Textures/wood.png" id="3_wtjv8"]
 [ext_resource type="ArrayMesh" uid="uid://8xy6pcapiccf" path="res://Wall.obj" id="4"]
-[ext_resource type="Texture2D" uid="uid://h6xmk40kgm3" path="res://Textures/wallzz.png" id="5_jf2ro"]
+[ext_resource type="Texture2D" uid="uid://5mcdljohj2t5" path="res://Textures/wallzz.png" id="5_jf2ro"]
 [ext_resource type="Texture2D" uid="uid://8lnxrk8mw4xb" path="res://Textures/tiles.png" id="6_xtsma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxns0"]
