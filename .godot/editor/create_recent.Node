@@ -1,5 +1,9 @@
-Camera2D
+AudioStreamPlayer
+Camera3D
+SubViewport
+SubViewportContainer
 CanvasLayer
+Camera2D
 Node3D
 TextureProgressBar
 CharacterBody3D

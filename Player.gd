@@ -21,14 +21,17 @@ func get_direction(direction):
 
 func tween_translation(change):
 	$AnimationPlayer.play("Step")
+	$FootSteps.play()
 	tween = create_tween()
 	tween.tween_property(self, "position", self.position + change, 0.5)
 	tween.set_ease(tween.EASE_IN_OUT)
 	tween.set_trans(tween.TRANS_QUAD)
 	tween.play()
 	await tween.finished
+	
 	if tween.finished:
 		$AnimationPlayer.play("idle")
+		$FootSteps.stop()
 
 func tween_rotation(change):
 	tween = create_tween()
