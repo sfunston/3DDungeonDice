@@ -7,7 +7,7 @@
 [ext_resource type="Shader" path="res://Models/grain.gdshader" id="4_smckx"]
 [ext_resource type="Shader" path="res://Models/sharpness.gdshader" id="5_we88c"]
 [ext_resource type="PackedScene" uid="uid://bgqm5oa52lem8" path="res://sword_4.tscn" id="6_s6d8x"]
-[ext_resource type="AudioStream" uid="uid://bf0vdyuc8qgfe" path="res://Sound/stepecho2.ogg" id="8_3vyu2"]
+[ext_resource type="AudioStream" uid="uid://78nkmb7ulx0p" path="res://Sound/stepecho3.ogg" id="8_se21c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_by2wg"]
 shader = ExtResource("2_kxy7j")
@@ -239,7 +239,7 @@ distance_fade_enabled = true
 omni_range = 10.0
 
 [node name="FootSteps" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_3vyu2")
-volume_db = -10.0
+stream = ExtResource("8_se21c")
+volume_db = -15.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
