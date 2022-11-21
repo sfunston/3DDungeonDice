@@ -1,9 +1,8 @@
-res://World.tscn
 res://Player.tscn
+res://World.tscn
 res://Cell.tscn
 res://MapCreator.tscn
 res://eyemon_done.tscn
 res://sword_4.tscn
 res://health_bar.tscn
 res://Map.tscn
-res://Player.gd

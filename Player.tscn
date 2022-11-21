@@ -240,5 +240,6 @@ omni_range = 10.0
 
 [node name="FootSteps" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_3vyu2")
+volume_db = -10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
