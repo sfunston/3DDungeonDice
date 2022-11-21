@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4l8g5digyffj"]
+[gd_scene load_steps=14 format=3 uid="uid://b4l8g5digyffj"]
 
 [ext_resource type="ArrayMesh" uid="uid://da51q5b8jbtrf" path="res://Floor.obj" id="2"]
 [ext_resource type="Script" path="res://Cell.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://cdxhfpya4ohui" path="res://Textures/floors.png" id="3_amdqy"]
 [ext_resource type="ArrayMesh" uid="uid://8xy6pcapiccf" path="res://Wall.obj" id="4"]
 [ext_resource type="Texture2D" uid="uid://h6xmk40kgm3" path="res://Textures/wallzz.png" id="5_jf2ro"]
+[ext_resource type="Texture2D" uid="uid://8lnxrk8mw4xb" path="res://Textures/tiles.png" id="6_xtsma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxns0"]
 diffuse_mode = 1
@@ -28,7 +29,7 @@ albedo_texture = ExtResource("5_jf2ro")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjeyb"]
 diffuse_mode = 1
-albedo_texture = ExtResource("3_amdqy")
+albedo_texture = ExtResource("6_xtsma")
 
 [sub_resource type="BoxShape3D" id="2"]
 
