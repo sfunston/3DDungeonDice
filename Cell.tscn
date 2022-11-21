@@ -38,27 +38,27 @@ collision_mask = 0
 script = ExtResource("3")
 
 [node name="TopFace" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 3, 0)
 mesh = ExtResource("2")
 surface_material_override/0 = SubResource("StandardMaterial3D_sxns0")
 
 [node name="NorthFace" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, 4.37114e-08, 1, -4.37114e-08, 0, 1, -1)
+transform = Transform3D(-1, 1.50996e-07, 9.90035e-15, 0, -4.37114e-08, 1.5, 1.50996e-07, 1, 6.55671e-08, 0, 1.5, -1)
 mesh = ExtResource("4")
 surface_material_override/0 = SubResource("StandardMaterial3D_xn2k8")
 
 [node name="EastFace" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 1, 1, 0)
+transform = Transform3D(-4.37114e-08, -1, -6.55671e-08, 0, -4.37114e-08, 1.5, -1, 4.37114e-08, 2.86603e-15, 1, 1.5, 0)
 mesh = ExtResource("4")
 surface_material_override/0 = SubResource("StandardMaterial3D_1obkx")
 
 [node name="SouthFace" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1.31134e-07, 1, -4.37114e-08, -1, 1.31134e-07, 0, 1, 1)
+transform = Transform3D(1, -4.37114e-08, -2.86603e-15, 0, -4.37114e-08, 1.5, -4.37114e-08, -1, -6.55671e-08, 0, 1.5, 1)
 mesh = ExtResource("4")
 surface_material_override/0 = SubResource("StandardMaterial3D_kcy5p")
 
 [node name="WestFace" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, -1, 1, 0)
+transform = Transform3D(7.54979e-08, 1, 6.55671e-08, 0, -4.37114e-08, 1.5, 1, -7.54979e-08, -4.95018e-15, -1, 1.5, 0)
 mesh = ExtResource("4")
 surface_material_override/0 = SubResource("StandardMaterial3D_4ak6i")
 
@@ -67,5 +67,5 @@ mesh = ExtResource("2")
 surface_material_override/0 = SubResource("StandardMaterial3D_xjeyb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("2")
