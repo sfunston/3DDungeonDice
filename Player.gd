@@ -27,6 +27,8 @@ func tween_translation(change):
 	tween.set_trans(tween.TRANS_QUAD)
 	tween.play()
 	await tween.finished
+	if tween.finished:
+		$AnimationPlayer.play("idle")
 
 func tween_rotation(change):
 	tween = create_tween()
